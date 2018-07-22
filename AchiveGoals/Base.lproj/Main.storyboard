@@ -135,18 +135,41 @@
                                                     <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpy-ux-xgl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <subviews>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMPELETED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unh-hW-9e8">
+                                                            <rect key="frame" x="104.5" y="13.5" width="167.5" height="33"/>
+                                                            <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="0.50880244006849318" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="24"/>
+                                                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.41647046232876711" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="unh-hW-9e8" firstAttribute="centerX" secondItem="Wpy-ux-xgl" secondAttribute="centerX" id="3sp-Ec-p6c"/>
+                                                        <constraint firstItem="unh-hW-9e8" firstAttribute="centerY" secondItem="Wpy-ux-xgl" secondAttribute="centerY" id="mIi-83-Ykb"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="W0e-tX-WQu" secondAttribute="trailing" constant="8" id="6hz-5L-rjE"/>
                                                 <constraint firstItem="rbI-bl-D2d" firstAttribute="leading" secondItem="jQ3-IH-uZU" secondAttribute="leading" constant="10" id="Sq3-Ri-y5A"/>
+                                                <constraint firstItem="Wpy-ux-xgl" firstAttribute="leading" secondItem="jQ3-IH-uZU" secondAttribute="leading" id="VVN-lg-mz2"/>
                                                 <constraint firstItem="W0e-tX-WQu" firstAttribute="leading" secondItem="rbI-bl-D2d" secondAttribute="trailing" constant="10" id="VXO-WD-g34"/>
+                                                <constraint firstItem="Wpy-ux-xgl" firstAttribute="top" secondItem="jQ3-IH-uZU" secondAttribute="top" id="X42-lB-D2o"/>
                                                 <constraint firstAttribute="bottom" secondItem="W0e-tX-WQu" secondAttribute="bottom" constant="8" id="lYH-td-64t"/>
                                                 <constraint firstItem="W0e-tX-WQu" firstAttribute="top" secondItem="jQ3-IH-uZU" secondAttribute="top" constant="8" id="nEN-z2-Ive"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wpy-ux-xgl" secondAttribute="trailing" id="qi1-kW-wIX"/>
                                                 <constraint firstItem="rbI-bl-D2d" firstAttribute="top" secondItem="jQ3-IH-uZU" secondAttribute="top" id="rjW-eX-fG6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wpy-ux-xgl" secondAttribute="bottom" id="tRQ-lH-wV4"/>
                                                 <constraint firstAttribute="bottom" secondItem="rbI-bl-D2d" secondAttribute="bottom" id="yVX-op-0gt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completeLabel" destination="unh-hW-9e8" id="hMj-ag-tBi"/>
+                                            <outlet property="completeView" destination="Wpy-ux-xgl" id="0DX-Jd-mtf"/>
                                             <outlet property="goalDescriptionLbl" destination="FPX-51-kuN" id="9R9-H8-0li"/>
                                             <outlet property="goalProgressLbl" destination="W0e-tX-WQu" id="JWp-Ff-Xrf"/>
                                             <outlet property="goalTypeLbl" destination="pTM-cV-w9e" id="hdp-c2-ZGm"/>
