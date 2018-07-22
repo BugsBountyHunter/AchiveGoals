@@ -20,9 +20,14 @@ class GoalCell: UITableViewCell {
 //        self.goalProgressLbl.text = String(describing: goalProgressAmount) //String(describing:goalProgressAmount)
 //    }
     
-    func configureCell(description:String , type:GoalType ,goalProgressAmount:Int){
-        self.goalDescriptionLbl.text = description
-        self.goalTypeLbl.text = type.rawValue
-        self.goalProgressLbl.text = String(describing: goalProgressAmount) //String(describing:goalProgressAmount)
+//    func configureCell(description:String , type:GoalType ,goalProgressAmount:Int){
+//        self.goalDescriptionLbl.text = description
+//        self.goalTypeLbl.text = type.rawValue
+//        self.goalProgressLbl.text = String(describing: goalProgressAmount) //String(describing:goalProgressAmount)
+//    }
+    func configureCell(goal:Goals){
+        self.goalDescriptionLbl.text = goal.goalDescription
+        self.goalTypeLbl.text = goal.goalType
+        self.goalProgressLbl.text = String(describing: goal.goalProgress) //String(describing:goalProgressAmount)
     }
 }
